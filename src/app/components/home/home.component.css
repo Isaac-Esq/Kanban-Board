@@ -1,0 +1,40 @@
+#tareas .col{
+    border: 1px solid rgba(99, 99, 99, 0.103);
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#inputAdd{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tasks{
+    display: inline-block;
+    border: 1px solid rgba(99, 99, 99, 0.103);
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 5px;
+    width: 100%;
+}
+.tasks p{
+    display: inline-block;
+}
+
+.tasks i{
+    font-size: 1.5rem;
+    float: right;
+    cursor: pointer;
+}
+
+.bi-arrow-right-circle-fill:hover,.bi-arrow-left-circle-fill:hover{
+    color: rgb(8, 182, 8);
+    transition: .5s;
+}
+
+.bi-trash-fill:hover{
+    color:red;
+    transition: .5s;
+}

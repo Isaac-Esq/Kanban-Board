@@ -1,0 +1,57 @@
+
+<div class="container-fluid mt-5">
+    <div class="row my-5 text-center">
+        <div class="col-md-6 col-sm-12 col-lg-6">
+            <input class="form-control" [(ngModel)]="input" type="text">
+        </div>
+        <div class="col">
+            <button class="btn btn-primary" (click)="addToBacklog()">Crear Tarea</button>
+        </div>
+    </div>
+    <div class="row" id="tareas">
+        <div class="col">
+            <h2>Backlog</h2>
+            <hr>
+            <div *ngFor="let tarea of tareas" class="tasks my-2">
+                <p>{{tarea.nombre}}</p>
+                <i class="bi bi-trash-fill" (click)="remove(tarea.nombre,tarea.posicion)"></i>
+                <i class="bi bi-arrow-right-circle-fill" (click)="add(tarea.nombre,tarea.posicion)"></i>
+                <i class="bi bi-arrow-left-circle-fill" (click)="left(tarea.nombre,tarea.posicion)"></i>
+                  
+            </div>
+        </div>
+        <div class="col">
+            <h2>ToDo</h2>
+            <hr>
+            <div *ngFor="let tarea of todo" class="tasks my-2">
+                <p>{{tarea.nombre}}</p>
+                <i class="bi bi-trash-fill" (click)="remove(tarea.nombre,tarea.posicion)"></i>
+                <i class="bi bi-arrow-right-circle-fill" (click)="add(tarea.nombre,tarea.posicion)"></i>
+                <i class="bi bi-arrow-left-circle-fill" (click)="left(tarea.nombre,tarea.posicion)"></i>
+                  
+            </div>
+        </div>
+        <div class="col">
+            <h2>Ongoing</h2>
+            <hr>
+            <div *ngFor="let tarea of on" class="tasks my-2">
+                <p>{{tarea.nombre}}</p>
+                <i class="bi bi-trash-fill" (click)="remove(tarea.nombre,tarea.posicion)"></i>
+                <i class="bi bi-arrow-right-circle-fill" (click)="add(tarea.nombre,tarea.posicion)"></i>
+                <i class="bi bi-arrow-left-circle-fill" (click)="left(tarea.nombre,tarea.posicion)"></i>
+                  
+            </div>
+        </div>
+        <div class="col">
+            <h2>Done</h2>
+            <hr>
+            <div *ngFor="let tarea of done" class="tasks my-2">
+                <p>{{tarea.nombre}}</p>
+                <i class="bi bi-trash-fill" (click)="remove(tarea.nombre,tarea.posicion)"></i>
+                <i class="bi bi-arrow-right-circle-fill" (click)="add(tarea.nombre,tarea.posicion)"></i>
+                <i class="bi bi-arrow-left-circle-fill" (click)="left(tarea.nombre,tarea.posicion)"></i>
+                  
+            </div>
+        </div>
+    </div>
+</div>
